@@ -78,6 +78,102 @@ digital-galton-board/
 
 ---
 
+## *Controle interativo:* 
+Botão A (GP5):
+
+Cicla entre 1-5 bolas liberadas simultaneamente
+
+Exibido como "A:X" no canto superior esquerdo
+
+Botão B (GP6):
+
+Ajusta o desbalanceamento (0-10)
+
+0 = Viés máximo para esquerda
+
+5 = Distribuição balanceada (padrão)
+
+10 = Viés máximo para direita
+
+Exibido como "B:X" no canto superior direito
+
+
+## Exibição de Dados:
+*Total de bolas:* "T:XXXX" no canto inferior esquerdo
+
+*Histograma:*
+Normalizado automaticamente
+Altura máxima configurável (MAX_HISTOGRAM_HEIGHT)
+
+*Elementos visuais:*
+Pinos hexagonais
+Trajetórias das bolas
+Canaletas / receptáculos
+
+
+## Princípios de Funcionamento
+
+**Física da Simulação**
+```c
+void update_particles() {
+    // Aplica gravidade
+    particles[i].vy += GRAVITY;
+    
+    // Atualiza posição
+    particles[i].x += particles[i].vx;
+    particles[i].y += particles[i].vy;
+
+    // Colisões elásticas com coeficiente BOUNCINESS
+    if (collision) {
+        particles[i].vx = -particles[i].vx * BOUNCINESS;
+    }
+}
+```
+
+Algoritmo de Decisão com Viés
+```c
+bool random_decision_with_bias() {
+    int threshold = map(BALANCE_BIAS, 0, 10, 5, 95);
+    return (rand() % 100) < threshold;
+}
+```
+
+Normalização do Histograma
+```c
+void normalize_histogram() {
+    uint16_t max_val = find_max_value();
+    for (int i = 0; i < NUM_BINS; i++) {
+        histogram[i] = (histogram[i] * MAX_HISTOGRAM_HEIGHT) / max_val;
+    }
+}
+```
+
+## Parâmetros Ajustáveis:
+- Parâmetro	Valores	Efeito
+- GRAVITY	0.1-0.5	Ajusta velocidade de queda
+- BOUNCINESS	0.1-0.9	Controla elasticidade nas colisões
+- PIN_SPACING_HORIZONTAL	5-15	Espaçamento entre pinos
+- MAX_HISTOGRAM_HEIGHT	10-20	Altura máxima do gráfico
+
+## **Teoria Matemática Implementada:**
+Distribuição Binomial: Simulada pelo padrão de colisões
+## **Lei dos Grandes Números:** Demonstrada pela convergência do histograma
+Processos Estocásticos: Decisões aleatórias com viés controlável
+
+## Como Compilar e Executar
+Clone o repositório
+Configure o ambiente de desenvolvimento para Raspberry Pi Pico
+Conecte os componentes conforme o diagrama
+Compile e carregue o firmware:
+
+```bash
+mkdir build && cd build
+cmake ..
+make
+```
+
+
+
 ## Exemplos de Funcionamento
 
 ### 1. Contador Total de Bolas
@@ -90,10 +186,9 @@ Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e 
 
 ### 2. Simulação com Desbalanceamento
 
-Aqui, o joystick foi usado para aplicar viés à direita. Note a assimetria da distribuição final:
+Aqui, o botão foi usado para aplicar viés à direita. Note a assimetria da distribuição final:
 
-![Simulação com Viés](assets/gif_desbalanceamento.gif)
-
+![Simulação com Viés](https://github.com/filipe19/filipe_sousa_embarcatech_HBr_2025/issues/17#issue-3053934777)
 ---
 
 ### 3. Múltiplas Bolas Simultâneas
@@ -101,6 +196,12 @@ Aqui, o joystick foi usado para aplicar viés à direita. Note a assimetria da d
 Nesta simulação, várias partículas caem ao mesmo tempo, aumentando a velocidade da formação do histograma:
 
 ![Várias Bolas ao Mesmo Tempo](assets/gif_multibola.gif)
+
+
+
+## Demonstração em Vídeo 
+
+[![Assista ao vídeo da Placa de Galton Digital](https://img.youtube.com/vi/FgTVdCW7lLk/0.jpg)](https://www.youtube.com/watch?v=FgTVdCW7lLk)
 
 ---
 
@@ -134,9 +235,13 @@ Depois, carregue o `.uf2` gerado para a sua Raspberry Pi Pico.
 
 * Raspberry Pi Pico com BitDogLab ou similar
 * Display OLED SSD1306 (via I2C)
-* Joystick analógico com botões
+* Botões
 * Ambiente de desenvolvimento para C/C++ com SDK da Pico
 
+## Referências
+- "The Galton Board: 150 Years of Normal Distribution" - Statistical Science
+- Raspberry Pi Pico C/C++ SDK Documentation
+- Principios de Simulação Física - David H. Eberly
 
 ## **License**
 
