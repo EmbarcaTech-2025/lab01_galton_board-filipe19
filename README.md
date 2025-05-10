@@ -9,6 +9,10 @@
 
 This project implements a digital version of a Galton Board (or Plinko), demonstrating how a series of random binary decisions leads to a **normal probability distribution**.  
 
+![Image](https://github.com/user-attachments/assets/7b051d18-c318-43bf-a24c-10185dbc472d)
+_Foto do display oled durante os testes - developmente environment._  
+
+
 ## **Objective**  
 
 Create an interactive visualization that simulates the behavior of a Galton Board using:  
@@ -29,6 +33,9 @@ Create an interactive visualization that simulates the behavior of a Galton Boar
 # Digital Galton Board
 
 Este projeto implementa uma versão digital da **Galton Board** utilizando a Raspberry Pi Pico com o kit **BitDogLab**. A simulação permite visualizar em tempo real o comportamento estatístico de partículas que colidem com pinos fixos e se acumulam em "bins", ilustrando conceitos como **distribuição binomial**, **Teorema Central do Limite** e a **Lei dos Grandes Números**.
+
+![Image](https://github.com/user-attachments/assets/f7c703dd-2d34-49cb-bfd7-568ae25165a4)
+_Foto da BitDogLab e ao fundo, o VSCode developmente environment._  
 
 ---
 
@@ -75,6 +82,10 @@ digital-galton-board/
     ├── gif_desbalanceamento.gif    # GIF: Simulação com viés/desbalanceamento
     └── gif_multibola.gif           # GIF: Múltiplas bolas caindo simultaneamente
 ```
+
+
+![Image](https://github.com/user-attachments/assets/01cdeb94-b9c7-456d-ac25-e762928edade)
+_Photo of my implementation in the VSCode developmente environment._  
 
 ---
 
@@ -172,16 +183,6 @@ cmake ..
 make
 ```
 
-![Image](https://github.com/user-attachments/assets/7b051d18-c318-43bf-a24c-10185dbc472d)
-_Foto do display oled durante os testes - developmente environment._  
-
-
-![Image](https://github.com/user-attachments/assets/01cdeb94-b9c7-456d-ac25-e762928edade)
-_Photo of my implementation in the VSCode developmente environment._  
-
-![Image]!(https://github.com/user-attachments/assets/f7c703dd-2d34-49cb-bfd7-568ae25165a4)
-_Foto da BitDogLab e ao fundo, o VSCode developmente environment._  
-
 
 ## Exemplos de Funcionamento
 
@@ -191,6 +192,7 @@ Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e 
 
 
 ![Contador Total de Bolas](https://github.com/user-attachments/assets/89c5a211-af18-403d-8df4-4433f3f387c8)
+
 _Photo of my implementation - Contador Total de Bolinhas._  
 
 
