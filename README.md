@@ -179,7 +179,7 @@ _Foto do display oled durante os testes - developmente environment._
 ![Image](https://github.com/user-attachments/assets/01cdeb94-b9c7-456d-ac25-e762928edade)
 _Photo of my implementation in the VSCode developmente environment._  
 
-![Image]![Image](https://github.com/user-attachments/assets/c9208a5b-c449-4274-82e7-0fdb2ce7744b)
+![Image]!(https://github.com/user-attachments/assets/f7c703dd-2d34-49cb-bfd7-568ae25165a4)
 _Foto da BitDogLab e ao fundo, o VSCode developmente environment._  
 
 
@@ -190,8 +190,7 @@ _Foto da BitDogLab e ao fundo, o VSCode developmente environment._
 Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e caem nos bins:
 
 
-
-![Contador Total de Bolas](assets/gif_total_counter.gif)
+![Contador Total de Bolas]![Image](https://github.com/user-attachments/assets/89c5a211-af18-403d-8df4-4433f3f387c8)
 _Photo of my implementation - Contador Total de Bolinhas._  
 
 
