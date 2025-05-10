@@ -190,7 +190,7 @@ _Foto da BitDogLab e ao fundo, o VSCode developmente environment._
 Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e caem nos bins:
 
 
-![Contador Total de Bolas]![Image](https://github.com/user-attachments/assets/89c5a211-af18-403d-8df4-4433f3f387c8)
+![Contador Total de Bolas](https://github.com/user-attachments/assets/89c5a211-af18-403d-8df4-4433f3f387c8)
 _Photo of my implementation - Contador Total de Bolinhas._  
 
 
