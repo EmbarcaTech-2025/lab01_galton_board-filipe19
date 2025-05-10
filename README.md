@@ -172,6 +172,15 @@ cmake ..
 make
 ```
 
+![Image](https://github.com/user-attachments/assets/7b051d18-c318-43bf-a24c-10185dbc472d)
+_Foto do display oled durante os testes - developmente environment._  
+
+
+![Image](https://github.com/user-attachments/assets/01cdeb94-b9c7-456d-ac25-e762928edade)
+_Photo of my implementation in the VSCode developmente environment._  
+
+![Image]![Image](https://github.com/user-attachments/assets/c9208a5b-c449-4274-82e7-0fdb2ce7744b)
+_Foto da BitDogLab e ao fundo, o VSCode developmente environment._  
 
 
 ## Exemplos de Funcionamento
@@ -180,7 +189,11 @@ make
 
 Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e caem nos bins:
 
+
+
 ![Contador Total de Bolas](assets/gif_total_counter.gif)
+_Photo of my implementation - Contador Total de Bolinhas._  
+
 
 ---
 
@@ -188,20 +201,28 @@ Abaixo, o contador no canto da tela aumenta conforme novas bolas são geradas e 
 
 Aqui, o botão foi usado para aplicar viés à direita. Note a assimetria da distribuição final:
 
-![Simulação com Viés](https://github.com/filipe19/filipe_sousa_embarcatech_HBr_2025/issues/17#issue-3053934777)
+![Simulação com Viés](https://github.com/user-attachments/assets/5a47eb1e-7c77-463e-b45d-708d8b0dd126)
+
+
+_Photo of my implementation - Simulação com Viés - tendência para esquerda/direita._  
+
 ---
 
 ### 3. Múltiplas Bolas Simultâneas
 
 Nesta simulação, várias partículas caem ao mesmo tempo, aumentando a velocidade da formação do histograma:
 
-![Várias Bolas ao Mesmo Tempo](assets/gif_multibola.gif)
+![Várias Bolas ao Mesmo Tempo](https://github.com/user-attachments/assets/c9208a5b-c449-4274-82e7-0fdb2ce7744b)
+
+_Photo of my implementation - Várias Bolas ao Mesmo Tempo._  
 
 
 
 ## Demonstração em Vídeo 
 
 [![Assista ao vídeo da Placa de Galton Digital](https://img.youtube.com/vi/FgTVdCW7lLk/0.jpg)](https://www.youtube.com/watch?v=FgTVdCW7lLk)
+
+_Assista ao vídeo da Placa de Galton Digital._  
 
 ---
 
