@@ -54,7 +54,7 @@ _Foto da BitDogLab e ao fundo, o VSCode developmente environment._
 4. **Controles:** Botões A e B, que ajustam parâmetros em tempo real
 
 
-![Image](https://github.com/user-attachments/assets/36775d98-e399-4e9b-bb96-c9202b3d1a4a)
+![Image](https://github.com/user-attachments/assets/cd1889eb-3e9d-4e18-9ea1-6a7d34c865cd)
 _Photo of my implementation in the VSCode developmente environment._  
 
 ---
@@ -107,8 +107,8 @@ lab01_galton_board-filipe19/
 ├── inc/
 │   ├── ssd1306.h           # Biblioteca para controle do display
 │   ├── ssd1306_i2c.[ch]    # Driver I2C para o display
+│   └── galton_config.h     # Configurações e constantes
 ├── src/
-│   ├── galton_config.h     # Configurações e constantes
 │   ├── galton_display.c    # Renderização e inicialização
 │   └── galton_simulation.c # Lógica da simulação
 ├── assets/                 # Imagens e GIFs demonstrativos
