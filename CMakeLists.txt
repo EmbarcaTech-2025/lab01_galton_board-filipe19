@@ -32,6 +32,7 @@ add_executable(lab01_galton_board-filipe19
     src/galton_display.c
     src/galton_simulation.c
     inc/ssd1306_i2c.c
+    inc/galton_config
 )
 
 

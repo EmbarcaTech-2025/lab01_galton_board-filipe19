@@ -1,6 +1,6 @@
 // Lógica da simulação
 
-#include "galton_config.h"  // Inclusão do cabeçalho com definições e constantes do projeto
+#include "inc/galton_config.h"  // Inclusão do cabeçalho com definições e constantes do projeto
 
 /************ Variáveis globais de configuração ************/
 float GRAVITY = 0.2f;                   // Aceleração gravitacional das partículas

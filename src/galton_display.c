@@ -34,7 +34,7 @@
 
 
 // Renderização e inicialização
-#include "galton_config.h" // Inclui configurações e definições necessárias do projeto Galton Board
+#include "inc/galton_config.h" // Inclui configurações e definições necessárias do projeto Galton Board
 
 // Função principal de configuração do sistema
 void setup() {
