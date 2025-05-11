@@ -11,7 +11,8 @@
 Em um tabuleiro Galton idealizado, como o mostrado na Figura 1, uma bola quica contra um único pino em cada fileira do tabuleiro. Quando a bola atinge o pino, ela tem 50% de probabilidade de quicar para a esquerda e 50% de probabilidade de quicar para a direita. Nessa idealização, o resultado do quique em cada fileira é completamente independente dos quiques nas fileiras anteriores.
 
 ![Image](https://github.com/user-attachments/assets/8b778056-55c2-4cd2-a578-e20ec5abdc4d)
-*Figura 1. Visão geral do Conselho Galton (Fonte: [V. Hunter Adams](https://vanhunteradams.com/Pico/Galton/Galton.html#Introduction))*
+
+_Figura 1. Visão geral do Tabuleiro ou Placa de Galton (Fonte: [V. Hunter Adams](https://vanhunteradams.com/Pico/Galton/Galton.html#Introduction))_
 
 Um conjunto de receptáculos captura as bolas conforme elas caem pela fileira inferior do tabuleiro. Podemos rotular cada uma desses receptáculos começando pela esquerda com números inteiros crescentes a partir de 0. O número de caixas será igual a um a mais que o número de linhas em nosso Tabuleiro de Galton.
 A bola cai no pino central superior, em uma posição que é metade do número de linhas no tabuleiro. Para o Tabuleiro de Galton de 5 linhas mostrado acima, por exemplo, a bola cai no tabuleiro na posição 2,5. Cada impacto no pino tem 50% de probabilidade de aumentar sua posição em 0.5 (a bola cai para a direita) e uma probabilidade de 50% de diminuir sua posição em 0.5 (a bola cai para a esquerda). A caixa na qual ela finalmente cai representa a soma de N tais ensaios aleatórios, onde N é o número de linhas no tabuleiro.
