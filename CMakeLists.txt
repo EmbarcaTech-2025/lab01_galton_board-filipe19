@@ -22,32 +22,38 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 # Initializes the Raspberry Pi Pico SDK
 include(pico_sdk_import.cmake)
 
-project(digital_galton_board C CXX ASM)
+project(lab01_galton_board-filipe19 C CXX ASM)
 
 pico_sdk_init()
 
-# Adds the project's source file and OLED display library
-add_executable(digital_galton_board 
-    digital_galton_board.c
+# Lista de arquivos fonte do projeto
+# Adiciona o executável principal com todos os arquivos fonte
+add_executable(lab01_galton_board-filipe19
+    src/galton_display.c
+    src/galton_simulation.c
     inc/ssd1306_i2c.c
 )
 
 
+pico_set_program_name(lab01_galton_board-filipe19 "lab01_galton_board-filipe19")
+pico_set_program_version(lab01_galton_board-filipe19 "0.1")
 
-pico_set_program_name(digital_galton_board "digital_galton_board")
-pico_set_program_version(digital_galton_board "0.1")
+# Habilita saída USB (para depuração)
+pico_enable_stdio_usb(lab01_galton_board-filipe19 1)
 
-# Enables USB output (for debugging)
-pico_enable_stdio_usb(digital_galton_board 1)
+# Bibliotecas padrão
+target_link_libraries(lab01_galton_board-filipe19 
+    pico_stdlib 
+    hardware_i2c 
+    hardware_adc 
+    hardware_pwm 
+    hardware_gpio 
+    pico_time
+)
 
-# Standard libraries
-target_link_libraries(digital_galton_board pico_stdlib hardware_i2c hardware_adc hardware_pwm hardware_gpio pico_time)
+# Inclui os diretórios necessários
+target_include_directories(lab01_galton_board-filipe19 PRIVATE ${CMAKE_CURRENT_LIST_DIR})
 
-# Includes the current directory
-target_include_directories(digital_galton_board PRIVATE ${CMAKE_CURRENT_LIST_DIR})
-
-pico_add_extra_outputs(digital_galton_board)
-
-
-
+# Gera arquivos adicionais (uf2, hex, etc)
+pico_add_extra_outputs(lab01_galton_board-filipe19)
 
